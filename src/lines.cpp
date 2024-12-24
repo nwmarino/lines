@@ -54,9 +54,7 @@ int main(int argc, char *argv[]) {
     for (int i = 1; i < argc; i++) {
       if (strcmp(argv[i], "-v") == 0) {
         verbose = true;
-      }
-
-      if (argv[i][0] == '.') {
+      } else if (argv[i][0] == '.') {
         exts.push_back(argv[i]);
       } else {
         std::cout << "bad argument: " << argv[i] << std::endl;
